@@ -1,15 +1,15 @@
 <?php
 // Verifica se o formulário foi submetido
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
     // Verifica se todos os campos do formulário estão presentes
-    if (isset($_POST["nome"]) && isset($_POST["cpf"]) && isset($_POST["email"]) && isset($_POST["telefone"]) && isset($_POST["data"]) && isset($_POST["horario"])) {
+    if (isset($_GET["nome"]) && isset($_GET["cpf"]) && isset($_GET["email"]) && isset($_GET["telefone"]) && isset($_GET["data"]) && isset($_GET["horario"])) {
         // Recupera os valores do formulário
-        $nome = $_POST["nome"];
-        $cpf = $_POST["cpf"];
-        $email = $_POST["email"];
-        $telefone = $_POST["telefone"];
-        $data = $_POST["data"];
-        $horario = $_POST["horario"];
+        $nome = $_GET["nome"];
+        $cpf = $_GET["cpf"];
+        $email = $_GET["email"];
+        $telefone = $_GET["telefone"];
+        $data = $_GET["data"];
+        $horario = $_GET["horario"];
 
         // Caminho para o arquivo do banco de dados SQLite
         $dbFile = 'dados.db';
